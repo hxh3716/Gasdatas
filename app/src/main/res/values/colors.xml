@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">@color/grey_white</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <color name="bcak">#000033</color>
+    <color name="grey_white">#B1AEAE</color>
+    <color name="spinner_">#5E5D5D</color>
+    <color name="white">#fff</color>
+    <color name="buttonborder">#0099FF</color>
+    <color name="buttonclick">#365A8A</color>
+    <color name="drawer_back">#666666</color>
+    <color name="easy_key">#333333</color>
+    <color name="edtext">#F88C57</color>
+    <color name="datatext">#12FAFC</color>
+    <color name="yello">#f7f702</color>
+    <color name="bar">#003366</color>
+    <color name="green">#56A810</color>
+    <color name="red">#E6084B</color>
+    <color name="tran_back">#000000</color>
+    <color name="stab_1">#666666</color>
+    <color name="stab_2">#999999</color>
+</resources>

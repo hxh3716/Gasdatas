@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.activity.AddTunnelActivity">
+
+    <LinearLayout
+        android:id="@+id/layout_add"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bcak"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.2" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            android:gravity="bottom|center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/place"
+                android:textColor="@color/white"
+                android:textSize="26sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="4"
+                android:background="@color/bar"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="20dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="right|bottom"
+                            android:text="巷道名称:"
+                            android:textColor="@color/white"
+                            android:textSize="18sp" />
+
+                        <EditText
+                            android:id="@+id/ed_detail"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="bottom"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1.8"
+                            android:gravity="bottom"
+                            android:maxLength="10"
+                            android:textColor="@color/white"
+                            android:textSize="18sp"
+                            android:theme="@style/MyEditText" />
+
+                    </LinearLayout>
+
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="15dp"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="right|bottom"
+                                android:text="巷道号:"
+                                android:textColor="@color/white"
+                                android:textSize="18sp" />
+
+                            <EditText
+                                android:id="@+id/ed_place_tunnel"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="bottom|right"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="1.8"
+                                android:gravity="bottom"
+                                android:inputType="number"
+                                android:maxLength="3"
+                                android:textColor="@color/white"
+                                android:textSize="22sp"
+                                android:theme="@style/MyEditText" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tv_tunnel"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="10dp"
+                            android:gravity="right|center_vertical"
+                            android:textColor="@color/red"
+                            android:textSize="14sp" />
+
+                    </FrameLayout>
+
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="15dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="right|bottom"
+                                android:text="巷道内组数:"
+                                android:textColor="@color/white"
+                                android:textSize="18sp" />
+
+                            <EditText
+                                android:id="@+id/ed_place_groups"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="bottom|right"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="1.8"
+                                android:gravity="bottom"
+                                android:inputType="number"
+                                android:maxLength="3"
+                                android:textColor="@color/white"
+                                android:textSize="22sp"
+                                android:theme="@style/MyEditText" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tv_groups"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="10dp"
+                            android:gravity="right|center_vertical"
+                            android:textColor="@color/red"
+                            android:textSize="14sp" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="15dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="right|bottom"
+                                android:text="组内钻孔数:"
+                                android:textColor="@color/white"
+                                android:textSize="18sp" />
+
+                            <EditText
+                                android:id="@+id/ed_place_holes"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="bottom|right"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="1.8"
+                                android:gravity="bottom"
+                                android:inputType="number"
+                                android:maxLength="3"
+                                android:textColor="@color/white"
+                                android:textSize="22sp"
+                                android:theme="@style/MyEditText" />
+
+
+                        </LinearLayout>
+                        <TextView
+                            android:id="@+id/tv_holes"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="10dp"
+                            android:gravity="center_vertical|right"
+                            android:textColor="@color/red"
+                            android:textSize="14sp" />
+                    </FrameLayout>
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="bottom|center_horizontal">
+
+                <Button
+                    android:id="@+id/btn_sure"
+                    android:layout_width="260dp"
+                    android:layout_height="55dp"
+                    android:background="@drawable/button_login_border"
+                    android:gravity="center"
+                    android:text="@string/sure"
+                    android:textColor="@drawable/button_login_onclick"
+                    android:textSize="24sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/btn_cancle"
+                    android:layout_width="260dp"
+                    android:layout_height="55dp"
+                    android:background="@drawable/button_login_border"
+                    android:gravity="center"
+                    android:text="@string/cancle"
+                    android:textColor="@drawable/button_login_onclick"
+                    android:textSize="24sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>
