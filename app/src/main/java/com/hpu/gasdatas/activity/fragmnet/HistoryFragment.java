@@ -13,6 +13,7 @@ import android.graphics.Color;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Environment;
 import android.os.StrictMode;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -32,6 +33,7 @@ import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
+import androidx.core.content.FileProvider;
 import androidx.fragment.app.Fragment;
 
 
@@ -409,7 +411,7 @@ public class HistoryFragment extends Fragment {
     }
 
     public void Exportexcel() {
-        String filePath = "/sdcard/CH4Monitor";
+        String filePath= getActivity().getFilesDir().getAbsolutePath()  +"/CH4Monitor";
         //判断是否有数据
         if (orders.size() == 0) {
             Toast.makeText(getContext(), "没有数据", Toast.LENGTH_SHORT).show();
@@ -444,12 +446,22 @@ public class HistoryFragment extends Fragment {
       //  Toast.makeText(getContext(), "已导出" + filePath, Toast.LENGTH_SHORT).show();
         //调取分享界面进行分享
         File excelfile=new File(filePath);
-        Uri excelUri = Uri.fromFile(excelfile);
-        Intent shareIntent = new Intent();
-        shareIntent.setAction(Intent.ACTION_SEND);
-        shareIntent.putExtra(Intent.EXTRA_STREAM, excelUri);
-        shareIntent.setType("application/vnd.ms-excel/*");
-        startActivity(Intent.createChooser(shareIntent, "分享到"));
+        if (excelfile==null || !excelfile.exists()){
+            Toast.makeText(getContext(),"文件不存在！",Toast.LENGTH_LONG).show();
+            return;
+        }
+        try {
+            Intent shareIntent = new Intent();
+            shareIntent.setAction(Intent.ACTION_SEND);
+            shareIntent.putExtra(Intent.EXTRA_STREAM, FileProvider.getUriForFile(getContext(),"com.hpu.gasdatas" + ".fileprovider", excelfile));
+            shareIntent.setType("*/*");
+            shareIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            shareIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+            startActivity(Intent.createChooser(shareIntent, "分享到"));
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
     }
 
     //申请权限回调@Override
