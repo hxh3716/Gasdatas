@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.hpu.gasdatas">
+
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
@@ -11,32 +12,35 @@
         android:label="CH4Monitor"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.activity.ChangeTunnelActivity"
-            android:launchMode="singleTask"
+        <meta-data
+            android:name="com.google.android.actions"
+            android:resource="@xml/file_provider_paths" />
+
+        <activity
+            android:name=".activity.activity.ChangeTunnelActivity"
             android:alwaysRetainTaskState="true"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+            android:launchMode="singleTask"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".activity.activity.AddTunnelActivity"
-            android:launchMode="singleTask"
             android:alwaysRetainTaskState="true"
+            android:launchMode="singleTask"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".activity.activity.PceditActivity"
-
             android:alwaysRetainTaskState="true"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".activity.activity.MeasurePlaceActivity"
-            android:launchMode="singleTask"
             android:alwaysRetainTaskState="true"
+            android:launchMode="singleTask"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".activity.activity.SettingActivity"
+            android:alwaysRetainTaskState="true"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:launchMode="singleTask"
-            android:alwaysRetainTaskState="true"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
-        />
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".activity.activity.LoginActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
@@ -48,6 +52,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.hpu.gasdatas.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+
+            <!-- 元数据 -->
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_provider_paths" />
+        </provider>
     </application>
 
 </manifest>
