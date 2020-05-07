@@ -583,7 +583,6 @@ public class DataFragment extends Fragment implements View.OnFocusChangeListener
      * @return
      */
     public boolean checkDigit(EditText mEd) {
-
         //先判断"."是不是在第一位
         if (mEd.getText().toString().indexOf(".") == 0) {
             return false;
@@ -595,9 +594,7 @@ public class DataFragment extends Fragment implements View.OnFocusChangeListener
             } else {
                 return false;
             }
-
         }
-
     }
 
     /**
@@ -760,7 +757,6 @@ public class DataFragment extends Fragment implements View.OnFocusChangeListener
                 }
             }
         });
-
     }
 
     /**
@@ -772,20 +768,8 @@ public class DataFragment extends Fragment implements View.OnFocusChangeListener
         textToSpeech.setPitch(1.0f);
         // 设置语速
         textToSpeech.setSpeechRate(3f);
-        textToSpeech.speak(data,//输入中文，若不支持的设备则不会读出来
-                TextToSpeech.QUEUE_FLUSH, null);
+        textToSpeech.speak(data, TextToSpeech.QUEUE_FLUSH, null);
     }
-
-//    @Override
-//    public void onStop() {
-//        super.onStop();
-//        if (textToSpeech!=null){
-//            textToSpeech.stop(); // 不管是否正在朗读TTS都被打断
-//            textToSpeech.shutdown(); // 关闭，释放资源
-//        }
-//
-//    }
-
     @Override
     public void onDestroy() {
         super.onDestroy();

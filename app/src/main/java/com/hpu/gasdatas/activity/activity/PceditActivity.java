@@ -106,13 +106,6 @@ public class PceditActivity extends AppCompatActivity {
                 dataFragment = new DataFragment();
                 fragmentTransaction.replace(R.id.frag_container, dataFragment).commit();
                 mDrawerLayout.closeDrawer(GravityCompat.START);
-//                hidefragment(fragmentTransaction);
-//                if (dataFragment==null){
-//                    fragmentTransaction.add(R.id.frag_container,dataFragment);
-//                }else {
-//                    fragmentTransaction.show(dataFragment);
-//                }
-//                fragmentTransaction.commit();
                 break;
             case R.id.btn_drawer_change:
                 intent = new Intent(PceditActivity.this, LoginActivity.class);

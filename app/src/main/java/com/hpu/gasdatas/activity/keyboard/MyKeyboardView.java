@@ -82,25 +82,15 @@ public class MyKeyboardView extends KeyboardView {
                 mKeybgDrawable.draw(canvas);
             }
             if (key.label != null) {
-                canvas.drawText(
-                        key.label.toString(),
-                        key.x + (key.width / 2),
-                        initdrawy + (key.height + paint.getTextSize() - paint.descent()) / 2,
-                        paint);
+                canvas.drawText(key.label.toString(), key.x + (key.width / 2), initdrawy + (key.height + paint.getTextSize() - paint.descent()) / 2, paint);
             } else if (key.icon != null) {
                 int intriWidth = key.icon.getIntrinsicWidth();
                 int intriHeight = key.icon.getIntrinsicHeight();
-
                 final int drawableX = key.x + (key.width - intriWidth) / 2;
                 final int drawableY = initdrawy + (key.height - intriHeight) / 2;
-
-                key.icon.setBounds(
-                        drawableX, drawableY, drawableX + intriWidth,
-                        drawableY + intriHeight);
-
+                key.icon.setBounds(drawableX, drawableY, drawableX + intriWidth, drawableY + intriHeight);
                 key.icon.draw(canvas);
             }
-
             canvas.restore();
         }
     }

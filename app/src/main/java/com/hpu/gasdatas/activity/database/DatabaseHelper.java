@@ -39,7 +39,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 Contants.data_table + "(" +
                 "id"+" integer ,"+  //巷道位置
                 "idtime"+" integer primary key ASC ,"+  //巷道位置和当前日期组成的id
-                "tunnel" + " integer  ," +//巷道号 “ 7”
+                "tunnel" + " integer  ," +              //巷道号 “ 7”
                 "location" + " nvarchar  ," +   //巷道+组数+钻孔数“7-10-1”
                 "tunnelname"+" nvarchar ,"+     //巷道名称
                 "potency" + " nvarchar,"+     // 瓦斯浓度
