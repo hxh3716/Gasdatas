@@ -135,7 +135,8 @@ public class VerificationActivity extends AppCompatActivity {
                             e.printStackTrace();
                         }
                         String hashResult = byteToHexStr(md.digest((SALT_STRING + imei).getBytes()));
-                        if (hashResult.equals(edCode.getText().toString())){
+                        String ss=edCode.getText().toString();
+                        if (hashResult.equals(edCode.getText().toString().trim())){
                             sp=getSharedPreferences("Authorize", this.MODE_PRIVATE);
                             SharedPreferences.Editor editor = sp.edit();
                             editor.putString("hash", hashResult);
@@ -160,7 +161,7 @@ public class VerificationActivity extends AppCompatActivity {
      * 验证hash判断是否进入登录页面
      */
     private void VertifyHash(String imei) {
-        getSharedPreferences("Authorize", this.MODE_PRIVATE);
+        sp=getSharedPreferences("Authorize", this.MODE_PRIVATE);
         MessageDigest md = null;
         try {
             md = MessageDigest.getInstance("SHA");
