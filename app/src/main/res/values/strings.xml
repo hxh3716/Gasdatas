@@ -1,22 +1,22 @@
 <resources>
     <string name="app_name">Gasdatas</string>
     <string name="login_set">设置</string>
-    <string name="measure_personname">测量人员姓名：</string>
+    <string name="measure_personname">检测人员姓名：</string>
     <string name="administrator">管理员登录</string>
     <string name="admini_name">姓名:</string>
     <string name="admini_pwd">密码:</string>
     <string name="sure">确定</string>
     <string name="back">返回</string>
     <string name="cancle">取消</string>
-    <string name="measureplace">测量地点设置</string>
-    <string name="change">更新测量地点</string>
+    <string name="measureplace">检测地点设置</string>
+    <string name="change">更新检测地点</string>
     <string name="ad">管理员</string>
-    <string name="place">测量地点设置</string>
+    <string name="place">检测地点设置</string>
     <string name="history">查看记录</string>
     <string name="exit">退出账号</string>
     <string name="toolbar_data">数据录入</string>
     <string name="change_people">更换人员</string>
-    <string name="measure">测量位置:</string>
+    <string name="measure">检测位置:</string>
     <string name="potency">瓦斯浓度:</string>
     <string name="pressure">孔口负压:</string>
     <string name="flow">混合流量:</string>

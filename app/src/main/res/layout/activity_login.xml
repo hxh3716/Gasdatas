@@ -43,7 +43,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:gravity="center"
-                android:text="煤矿瓦斯抽采数据快速记录"
+                android:text="钻孔瓦斯抽采数据快速记录"
                 android:textColor="@color/white"
                 android:textSize="26sp"
                 android:textStyle="bold" />

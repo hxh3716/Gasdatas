@@ -85,7 +85,7 @@ public class PlaceFragment extends Fragment {
         super.onActivityCreated(savedInstanceState);
         ButterKnife.bind(this, rootview);
        TextView mTvTitle= getActivity().findViewById(R.id.tv_title);
-        mTvTitle.setText("测量地点设置");
+        mTvTitle.setText("检测地点设置");
 //        //初始化并创建数据库
         try {
             dbHelper = new DatabaseHelper(getActivity(), DATABASE_NAME, null, DATABASE_VERSION);

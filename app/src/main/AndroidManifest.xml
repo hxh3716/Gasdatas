@@ -10,7 +10,7 @@
     <application
         android:allowBackup="true"
         android:icon="@drawable/logo"
-        android:label="CH4Monitor"
+        android:label="CH4Recorder"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".activity.activity.LoginActivity"
