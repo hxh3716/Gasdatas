@@ -27,7 +27,7 @@
             android:launchMode="singleTask"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
-            android:name=".activity.AddTunnelActivity"
+            android:name=".activity.activity.AddTunnelActivity"
             android:alwaysRetainTaskState="true"
             android:launchMode="singleTask"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
