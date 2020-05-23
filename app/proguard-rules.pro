@@ -48,9 +48,8 @@
 }
 
 -keep class * implements android.os.Parcelable {                                # 保持 Parcelable 不被混淆
-  public static final android.os.Parcelable$Creator *;
+  public static final android.os.Parcelable$Creator *;›
 }
-#如果有引用v4包可以添加下面这行
 -keep class android.support.v4.** { *; }
 -keep public class * extends android.support.v4.**
 -keep public class * extends android.app.Fragmen

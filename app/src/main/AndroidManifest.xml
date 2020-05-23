@@ -27,7 +27,7 @@
             android:launchMode="singleTask"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
-            android:name=".activity.activity.AddTunnelActivity"
+            android:name=".activity.AddTunnelActivity"
             android:alwaysRetainTaskState="true"
             android:launchMode="singleTask"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
@@ -50,7 +50,7 @@
             android:name=".activity.activity.VerificationActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
-            android:windowSoftInputMode="adjustResize|stateHidden">
+           >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

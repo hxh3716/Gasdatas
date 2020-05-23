@@ -135,7 +135,6 @@ public class VerificationActivity extends AppCompatActivity {
                             e.printStackTrace();
                         }
                         String hashResult = byteToHexStr(md.digest((SALT_STRING + imei).getBytes()));
-                        String ss=edCode.getText().toString();
                         if (hashResult.equals(edCode.getText().toString().trim())){
                             sp=getSharedPreferences("Authorize", this.MODE_PRIVATE);
                             SharedPreferences.Editor editor = sp.edit();
@@ -150,6 +149,8 @@ public class VerificationActivity extends AppCompatActivity {
                         }
 
                     }
+                }else {
+                    Toast.makeText(this,"授权码不能为空！",Toast.LENGTH_SHORT).show();
                 }
                 break;
             default:

@@ -1,6 +1,5 @@
 package com.hpu.gasdatas.activity.fragmnet;
 
-import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -11,8 +10,6 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.LinearLayout;
@@ -25,9 +22,8 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.hpu.gasdatas.R;
-import com.hpu.gasdatas.activity.activity.AddTunnelActivity;
+import com.hpu.gasdatas.activity.AddTunnelActivity;
 import com.hpu.gasdatas.activity.activity.ChangeTunnelActivity;
-import com.hpu.gasdatas.activity.contants.Contants;
 import com.hpu.gasdatas.activity.database.DatabaseHelper;
 import com.hpu.gasdatas.activity.util.place;
 

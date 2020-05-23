@@ -48,6 +48,8 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginRight="15dp"
+        android:scrollbars="vertical"
+        android:maxLines="1"
         android:layout_weight="4"/>
 </LinearLayout>
     <Button

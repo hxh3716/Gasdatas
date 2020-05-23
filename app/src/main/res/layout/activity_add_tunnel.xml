@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.activity.AddTunnelActivity">
+    tools:context=".activity.AddTunnelActivity">
 
     <LinearLayout
         android:id="@+id/layout_add"
