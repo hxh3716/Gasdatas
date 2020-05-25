@@ -135,6 +135,7 @@ public class VerificationActivity extends AppCompatActivity {
                             e.printStackTrace();
                         }
                         String hashResult = byteToHexStr(md.digest((SALT_STRING + imei).getBytes()));
+                        Log.e(TAG, "Onclick: "+hashResult );
                         if (hashResult.equals(edCode.getText().toString().trim())){
                             sp=getSharedPreferences("Authorize", this.MODE_PRIVATE);
                             SharedPreferences.Editor editor = sp.edit();

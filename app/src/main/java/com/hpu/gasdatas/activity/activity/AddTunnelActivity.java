@@ -81,7 +81,7 @@ public class AddTunnelActivity extends AppCompatActivity implements View.OnFocus
             @Override
             public void afterTextChanged(Editable editable) {
 
-                    search();
+                search();
 
 
             }
@@ -178,8 +178,8 @@ public class AddTunnelActivity extends AppCompatActivity implements View.OnFocus
             mHolesTv.setText("钻孔数不能为空!");
             return;
         }
-        if (mEdDetail.getText().toString().equals("")){
-            Toast.makeText(AddTunnelActivity.this,"巷道描述不能为空",Toast.LENGTH_SHORT).show();
+        if (mEdDetail.getText().toString().equals("")) {
+            Toast.makeText(AddTunnelActivity.this, "巷道描述不能为空", Toast.LENGTH_SHORT).show();
             return;
         }
 
@@ -187,7 +187,7 @@ public class AddTunnelActivity extends AppCompatActivity implements View.OnFocus
         values.put("tunnel", Integer.parseInt(mTunnelEd.getText().toString()));
         values.put("groups", Integer.parseInt(mGroupsEd.getText().toString()));
         values.put("holes", Integer.parseInt(mHolesEd.getText().toString()));
-        values.put("detail",mEdDetail.getText().toString());
+        values.put("detail", mEdDetail.getText().toString());
         db.insert(place_table, null, values);
         Toast.makeText(AddTunnelActivity.this, "添加成功", Toast.LENGTH_SHORT).show();
         db.close();
@@ -200,11 +200,11 @@ public class AddTunnelActivity extends AppCompatActivity implements View.OnFocus
         SharedPreferences.Editor editor = sp.edit();
 
 //            editor.putInt("tunnelItem",0);
-            editor.putInt("tunnel", 0);
-            editor.putInt("groups", 0);
-            editor.putInt("holes",0);
+        editor.putInt("tunnel", 0);
+        editor.putInt("groups", 0);
+        editor.putInt("holes", 0);
 //            editor.putInt("tunnelItem",0);
-            editor.commit();
+        editor.commit();
 
 
     }
@@ -235,7 +235,7 @@ public class AddTunnelActivity extends AppCompatActivity implements View.OnFocus
      * 输入框获得焦点监听
      *
      * @param view
-     * @param b 是否获得焦点
+     * @param b    是否获得焦点
      */
     @Override
     public void onFocusChange(View view, boolean b) {

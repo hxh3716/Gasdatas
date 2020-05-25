@@ -65,6 +65,7 @@ public class PceditActivity extends AppCompatActivity {
     private DataFragment dataFragment;
     private TextToSpeech textToSpeech = null;  //语音对象
     private boolean flag=false;
+    private  SharedPreferences sp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -82,7 +83,7 @@ public class PceditActivity extends AppCompatActivity {
 //        fragmentTransaction.hide(historyFragment);
         fragmentTransaction.commit();
 
-       SharedPreferences sp = getSharedPreferences("ch4data", Context.MODE_PRIVATE);
+        sp = getSharedPreferences("ch4data", Context.MODE_PRIVATE);
        //获得上次关闭页面时记住的`语音的选择
        if (sp!=null){
            mTxVoiceFalg.setText(sp.getString("voiceFlag","false"));
@@ -122,15 +123,20 @@ public class PceditActivity extends AppCompatActivity {
                 if (!flag){
                     return;
                 }
+                SharedPreferences.Editor edit=sp.edit();
+
                 if (mTxVoiceFalg.getText().toString().equals("false")){
                     mVoiceImg.setImageResource(R.drawable.horn);
                     mTxVoiceFalg.setText("true");
+                    edit.putString("voiceFlag","true");
                     Toast.makeText(PceditActivity.this,"语音输入已打开",Toast.LENGTH_SHORT).show();
                 }else {
                     mVoiceImg.setImageResource(R.drawable.mute);
                     mTxVoiceFalg.setText("false");
+                    edit.putString("voiceFlag","false");
                     Toast.makeText(PceditActivity.this,"语音输入已关闭",Toast.LENGTH_SHORT).show();
                 }
+                edit.commit();
 
                 break;
             default:

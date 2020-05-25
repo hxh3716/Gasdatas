@@ -419,7 +419,7 @@ public class HistoryFragment extends Fragment {
     }
 
     public void Exportexcel() {
-        String filePath= getActivity().getFilesDir().getAbsolutePath()  +"/CH4Monitor";
+        String filePath= getActivity().getFilesDir().getAbsolutePath()  +"/CH4Recorder";
         //判断是否有数据
         if (orders.size() == 0) {
             Toast.makeText(getContext(), "没有数据", Toast.LENGTH_SHORT).show();

@@ -110,8 +110,8 @@
                 android:layout_centerVertical="true"
                 android:layout_marginBottom="15dp"
                 android:background="@drawable/button_login_border"
-                android:text="@string/sure"
                 android:textColor="@drawable/button_login_onclick"
+                android:text="@string/sure"
                 android:textSize="24sp" />
         </LinearLayout>
         <TextView

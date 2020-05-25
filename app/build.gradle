@@ -13,7 +13,7 @@ android {
         android.applicationVariants.all { variant ->
             variant.outputs.all {
                 // outputFileName = "${productFlavors[0].name}_v${defaultConfig.versionName}_${buildType.name}.apk" } }
-                outputFileName = "CH4Monitor.apk"
+                outputFileName = "CH4Recorder.apk"
             }
         }
     }
